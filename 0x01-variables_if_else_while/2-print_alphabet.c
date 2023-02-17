@@ -7,7 +7,8 @@
  * it executes, and prints it
  * Return: Always 0 (Success)
  */
-int main() {
+int main(void) {
+// This function prints the lowercase alphabet followed by a new line
 char c = 'a';
 while(c <= 'z') {
 putchar(c);
