@@ -6,19 +6,20 @@
  * it executes, and prints it
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-char letter = 'a';
+	char ch = 'a';
 
-while (letter <= 'z')
-{
-if (letter != 'e' && letter != 'q')
-{
-putchar(letter);
+	while (ch <= 'z')
+	{
+		if (ch != 'e' && ch != 'q')
+		{
+			putchar(ch);
+		}
+		ch++;
+	}
+	putchar('\n');
+	return (0);
 }
-letter++;
-}
-putchar('\n');
-return 0;
-}
-}	
+
