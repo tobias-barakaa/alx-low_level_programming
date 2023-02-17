@@ -8,14 +8,17 @@
  */
 int main(void)
 {
-char c = "a"
-while(c <= "z")
+char letter = 'a';
+
+while (letter <= 'z')
 {
-if (c !="e" && c !="q") {
-putchar(c)
+if (letter != 'e' && letter != 'q')
+{
+putchar(letter);
 }
-c++;
+letter++;
 }
 putchar('\n');
 return 0;
+}
 }	
