@@ -8,17 +8,13 @@
  */
 int main(void)
 {
-    putchar('0');
-    putchar('1');
-    putchar('2');
-    putchar('3');
-    putchar('4');
-    putchar('5');
-    putchar('6');
-    putchar('7');
-    putchar('8');
-    putchar('9');
-    putchar('\n');
+	int n;
 
-    return 0;
+	for (n = 48; n < 58; n++)
+	{
+		putchar(n);
+	}
+	putchar('\n');
+	return (0);
 }
+
