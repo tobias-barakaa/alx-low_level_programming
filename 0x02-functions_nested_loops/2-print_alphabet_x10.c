@@ -8,10 +8,10 @@
 
 void print_alphabet_x10(void)
 {
-int i = 0, j;
+int i = 0, j = 0;
 while (i < 10)
 {
-for (j = 0; j < 26; j++)
+for (j = 0; j < 10; j++)
 {
 _putchar(j);
 }
