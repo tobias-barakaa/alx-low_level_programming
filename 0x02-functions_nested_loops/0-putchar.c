@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-/**
- * main - assigns a random number to int n everytime
- * it executes, and prints it
- * Return: Always 0 (Success)
- */
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
 int main(void) {
   _putchar('_');
   _putchar('p');
@@ -14,7 +13,6 @@ int main(void) {
   _putchar('h');
   _putchar('a');
   _putchar('r');
-  _putchar(' ');
   _putchar('\n');
   return 0;
 }
