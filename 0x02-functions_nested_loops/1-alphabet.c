@@ -10,9 +10,10 @@
 
 int main(void)
 {
-	char alphabet;
-	for(alphabet = "a"; alphabet <= "z"; alphabet++) {
-		_putchar("%c\n", alphabet);
+	char alphabet = "a";
+	while(alphabet <= "z") {
+	_putchar("\n", alphabet);
+	alphabet++;
 	}
 	_putchar("\n");
 	return(0);
