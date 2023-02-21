@@ -3,19 +3,18 @@
 /**
  * main - prints _putchar
  *
- * Description: prints _putchar
+ * print_alphabet - function to print alphabet without using printf
  *
  * Return: 0 (Success)
  */
 
-void print_alphabet()
+void print_alphabet(void)
 {
     char letter = 'a';
-    while (letter <= 'z') {
+    while (letter <= 'z'){ 
         _putchar(letter);
-        _putchar('\n');
         letter++;
-    }
+}
     _putchar('\n');
 	return(0);
 }
