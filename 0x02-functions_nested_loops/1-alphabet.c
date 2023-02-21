@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - prints _putchar
+ * main - prints_alphabet
  *
  * print_alphabet - function to print alphabet without using printf
- *
- * Return: 0 (Success)
+ * @void: first argument
+ * Return: 0 Always
  */
 
 void print_alphabet(void)
