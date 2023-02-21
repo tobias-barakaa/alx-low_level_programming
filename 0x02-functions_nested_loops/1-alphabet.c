@@ -8,13 +8,14 @@
  * Return: 0 (Success)
  */
 
-void print_alphabet(void)
+void print_alphabet()
 {
-	char alphabet = "a";
-	while(alphabet ="z") {
-	_putchar("\n", alphabet);
-	alphabet++;
-	}
-	_putchar("\n");
+    char letter = 'a';
+    while (letter <= 'z') {
+        _putchar(letter);
+        _putchar('\n');
+        letter++;
+    }
+    _putchar('\n');
 	return(0);
 }
