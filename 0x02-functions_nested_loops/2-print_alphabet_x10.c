@@ -10,7 +10,7 @@ void print_alphabet_x10(void)
 {
 char words;
 int t = 0;
-while (t <= 10)
+while (t <= 9)
 {
 for (words = 'a'; words <= 'z'; words++)
 {
