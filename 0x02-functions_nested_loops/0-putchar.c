@@ -8,8 +8,8 @@
  * Return: Always 0 (Success)
  */
 
-int main(void) 
+int main (char *) 
 {
-	putchar("_putchar");
+	_putchar("_putchar");
 	return (0);
 }
