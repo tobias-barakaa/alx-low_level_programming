@@ -11,7 +11,7 @@
 int main(void)
 {
 	char alphabet;
-	for(alphabet = "a"; alphabet =< "z"; alphabet++) {
+	for(alphabet = "a"; alphabet <= "z"; alphabet++) {
 		_putchar("%c\n", alphabet);
 	}
 	_putchar("\n");
