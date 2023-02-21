@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - assigns a random number to int n everytime
@@ -19,6 +20,8 @@ int main(void)
     _putchar('h');
     _putchar('a');
     _putchar('r');
+    -putchar(' ');
     _putchar('\n');
     return (0);
 }
+
