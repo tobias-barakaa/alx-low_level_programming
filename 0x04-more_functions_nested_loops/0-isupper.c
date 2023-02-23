@@ -10,10 +10,14 @@
 int _isupper(int c)
 {
 
-	c = 'A';
+	if (c = 'A')
+	{
 	printf("%c: %d\n", c, _isupper(c));
-	return (1);
-	c = 'a';
+	return (1)
+	}
+	else if (c = 'a')
+	{
 	printf("%c: %d\n", c, _isupper(c));
 	return (0);
+	}
 }
