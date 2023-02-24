@@ -6,9 +6,10 @@
  *
  * @a: first argument
  * @b: second argument
+ * Return: Return 0 Always
  */
 
 int mul(int a, int b)
 {
-	return a * b
+	return (a * b);
 }
