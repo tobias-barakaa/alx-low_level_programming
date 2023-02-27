@@ -3,11 +3,13 @@
 /**
  * swap_int - function to swap values
  * @a: first argument
+ * @b: second argument
  * Return: always return zero always
  */
 void swap_int(int *a, int *b)
 {
-	*a = *a;
+	int t;
+	t = *a;
 	*a = *b;
-	*b = *a;
+	*b = t;
 }
