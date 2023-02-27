@@ -1,15 +1,26 @@
 #include "main.h"
 
 /**
- * main - function that check for 
- *
- * Return: Always 0.
+ * print_rev - prints
+ * @s: string to be printed
  */
-int main(void)
+void print_rev(char *s)
 {
-        char *str;
+        int i, j, len;
 
-        str = "I do not fear";
-        print_rev(str);
-        return (0);
+        i = 0;
+
+        while (s[i] != '\0')
+        {
+                i++;
+        }
+
+        len = i;
+
+        for (j = len - 1; j >= 0; j--)
+        {
+                _putchar(s[j]);
+        }
+
+        _putchar('\n');
 }
