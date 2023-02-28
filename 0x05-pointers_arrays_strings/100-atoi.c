@@ -1,34 +1,46 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_triangle - prints a triangle.
- *@size: prints a triangle.
+ * _atoi - functions of strings
+ * @s: first argument
+ *
+ * Return: the int converted from the string
  */
-void print_triangle(int size)
+int _atoi(char *s)
 {
-	int i, j;
+        int i, d, n, len, f, digit;
 
-	for (i = 0; i < size; i++)
-	{
-		for (j = 0; j < size; j++)
-		{
-			if (j < size - i - 1)
-			{
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar('#');
-			}
-		}
-		if ((i + 1) == size)
-		{
-			break;
-		}
-		else
-		{
-			_putchar('\n');
-		}
-	}
-	_putchar('\n');
+        i = 0;
+        d = 0;
+        n = 0;
+        len = 0;
+        f = 0;
+        digit = 0;
+
+        while (s[len] != '\0')
+                len++;
+
+        while (i < len && f == 0)
+        {
+                if (s[i] == '-')
+                        ++d;
+
+                if (s[i] >= '0' && s[i] <= '9')
+                {
+                        digit = s[i] - '0';
+                        if (d % 2)
+                                digit = -digit;
+                        n = n * 10 + digit;
+                        f = 1;
+                        if (s[i + 1] < '0' || s[i + 1] > '9')
+                                break;
+                        f = 0;
+                }
+                i++;
+        }
+
+        if (f == 0)
+                return (0);
+
+        return (n);
 }
