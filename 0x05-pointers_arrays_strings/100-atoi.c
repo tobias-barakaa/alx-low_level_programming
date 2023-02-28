@@ -1,36 +1,40 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 /**
- *_atoi - strings t o interger
+ *_atoi - converts inteteger.
+ *@s: pointer to string.
  *
- *@s: string
- *
- *Return:integer 0 - no int
+ *Return: integer gotten.
  */
 int _atoi(char *s)
 {
-	int sign = 0;
-	unsigned int num = 0;
+	int index, ind2;
+	unsigned int res;
+	int sign = 1;
+	char now;
 
-	while (*s != '\0')
+	index = 0;
+	res = 0;
+	while (*(s + index) != '\0')
 	{
-		if (*s == '-')
+		now = *(s + index);
+		if (now == '-')
 		{
-			sign++;
+			sign *= -1;
 		}
-		if (*s >= '0' && *s <= '9')
+		if (now >= '0' && now <= '9')
 		{
-			num = (num * 10) + (*s - '0');
-		}
-		if (*s == ';')
-		{
+			ind2 = index;
+			while (*(s + ind2) > 47 && *(s + ind2) < 58)
+			{
+				res = (res * 10) + *(s + ind2) - '0';
+				ind2++;
+			}
 			break;
 		}
-		s++;
+		index++;
 	}
-	if (sign % 2 != 0)
-	{
-		return (-num);
-	}
-	return (num);
+	if (sign < 0)
+		res *= sign;
+	return (res);
 }
