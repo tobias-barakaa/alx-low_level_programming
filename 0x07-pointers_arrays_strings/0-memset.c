@@ -12,8 +12,11 @@ char *_memset(char *s, char b, unsigned int n)
 {
  unsigned char* p = s;
     unsigned char v = c;
-    while (n-- > 0) {
-        *p++ = v;
-    }
-    return s;
+     for (int i = 0; i < n; i++)
+     buffer[i] = " ";
+
+      for (int i = 0; i < n; i++)
+     _putchar("%c", buffer[i]);
 }
+
+
