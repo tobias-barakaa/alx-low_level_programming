@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * _memcpy - function to copy
- * @dest: argument to copy to
- * @src: second argument
- * @n: third argument
- * Return: always return 0
+ * _memcp - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
  */
-
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 
