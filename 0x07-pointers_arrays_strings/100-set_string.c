@@ -2,9 +2,10 @@
 #include "main.h"
 
 /**
- * print_diagsums - sum of square matrix
- * @a: arr first
- * @size: sizeo
+ * print_diagsums - prints the sum of the two diagonals of a square matrix
+ * @a: array to be used
+ * @size: size of the matrix
+ *
  * Return: void
  */
 
@@ -20,3 +21,4 @@ void print_diagsums(int *a, int size)
 	}
 	printf("%d, %d\n", sum_1, sum_2);
 }
+
