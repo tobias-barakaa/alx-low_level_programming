@@ -13,12 +13,11 @@ int _pow_recursion(int x, int y)
 	int result;
 	if (x != 0)
 	{
-		result *= y
+		return (1);
 	} 
 	else if (x < 0)
 	{
-		return (-1);
+		return (0);
 	}
-	_putchar(result);
-	return (result( _pow_recursion(y,x - 1)));
+	return (x *( _pow_recursion(y,x - 1)));
 }	
