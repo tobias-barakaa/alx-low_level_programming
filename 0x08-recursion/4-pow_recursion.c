@@ -13,7 +13,7 @@ int _pow_recursion(int x, int y)
 	int result;
 	if (x != 0)
 	{
-		result += y;
+		result *= y;
 		       --x;
 	}
 	return result;
