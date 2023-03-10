@@ -3,9 +3,9 @@
 
 /**
  * _sqrt_recursion - square root function
+ * sqr_toot - added function
  * @n: first argument
  * @i: added argument
- * sqr_toot - added function
  * Return: always zero
  */
 
