@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
- * _sqr_root - second function
+ * _sroot - second function
  * sqr_toot - added function
  * @n: first argument
  * @i: added argument
  * Return: always zero
  */
-
-int srt_root(int n, int i)
+int sroot(int n, int i);
+int sroot(int n, int i)
 {
 	if (i * i > n)
 	{
