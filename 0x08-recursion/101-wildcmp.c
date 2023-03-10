@@ -1,6 +1,6 @@
  #include "main.h"
 /**
- * wildcmp - two strings 
+ * wildcmp - two strings
  * @s1: the first argument
  * @s2: the second argument
  *
