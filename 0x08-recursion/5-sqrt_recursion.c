@@ -1,43 +1,42 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * _sroot - second function
- * @n: first argument
- * @i: added argument
- * Return: always zero
- */
-int sroot(int n, int i);
-int sroot(int n, int i)
+*check_prime - get the prime for n
+*@n: num we check is prime or not
+*@i: num we walk through to check the prime
+*Return: 0 if not prime, 1 if prime
+*/
+int check_prime(int n, int i)
 {
-	if (i * i > n)
+	if (i < n)
 	{
-		return (-1);
-	}
-	else if (i * i < n)
-	{
-		return (sroot(n, i + 1));
+		if (n % i == 0)
+		{
+			return (0);
+		}
+		else
+		{
+			return (check_prime(n, i + 1));
+		}
 	}
 	else
 	{
-		return (i);
+		return (1);
 	}
+
 }
 /**
-* _sqrt_recursion - function first
-* _sroot - second function
-*@n: argument
-*Return: zero always
+*is_prime_number - fun that we know if num is prime or not
+*@n: num we check
+*Return: 1 if prime, 0 otherwise
 */
-
-int _sqrt_recursion(int n)
+int is_prime_number(int n)
 {
-	if (n < 0)
+	if (n <= 0 || n == 1)
 	{
-		return (-1);
+		return (0);
 	}
 	else
 	{
-		return (sroot(n, 0));
+		return (check_prime(n, 2));
 	}
 }
