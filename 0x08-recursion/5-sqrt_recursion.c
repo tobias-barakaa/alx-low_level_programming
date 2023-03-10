@@ -3,7 +3,6 @@
 
 /**
  * _sroot - second function
- * sqr_toot - added function
  * @n: first argument
  * @i: added argument
  * Return: always zero
@@ -26,6 +25,7 @@ int sroot(int n, int i)
 }
 /**
 * _sqrt_recursion - function first
+* _sroot - second function
 *@n: argument
 *Return: zero always
 */
