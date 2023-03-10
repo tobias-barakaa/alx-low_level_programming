@@ -17,7 +17,7 @@ int sroot(int n, int i)
 	}
 	else if (i * i < n)
 	{
-		return (srt_root(n, i + 1));
+		return (sroot(n, i + 1));
 	}
 	else
 	{
@@ -38,6 +38,6 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (srt_root(n, 0));
+		return (sroot(n, 0));
 	}
 }
