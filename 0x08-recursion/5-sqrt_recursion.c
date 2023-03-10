@@ -25,7 +25,7 @@ int srt_root(int n, int i)
 	}
 }
 /**
-*_sqrt_recursion - root of n
+*_srt_root - function
 *@n: argument
 *Return: zero always
 */
