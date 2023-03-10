@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _sqrt_recursion - square root function
+ * _sqr_root - second function
  * sqr_toot - added function
  * @n: first argument
  * @i: added argument
@@ -25,7 +25,7 @@ int srt_root(int n, int i)
 	}
 }
 /**
-*_srt_root - function
+* _sqrt_recursion - function first
 *@n: argument
 *Return: zero always
 */
