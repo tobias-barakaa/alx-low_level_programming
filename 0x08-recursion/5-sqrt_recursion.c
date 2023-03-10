@@ -4,6 +4,8 @@
 /**
  * _sqrt_recursion - square root function
  * @n: first argument
+ * @i: added argument
+ * sqr_toot - added function
  * Return: always zero
  */
 
