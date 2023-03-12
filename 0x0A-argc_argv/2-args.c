@@ -2,17 +2,19 @@
 #include "main.h"
 
 /**
- * main - print number of prod
+ * main - function main loop
  * @argv: argrument first
  * @argc: second params
+ * Return: zero always
  */
 
 int main(int argc, char **argv)
 {
-        int count;
-        for (count=0; count < argc; count++)
-        {
-                printf("%s\n", argv[count]);
-        }
-                        return (0);
+	int num;
+
+	for (num = 0; num < argc; num++)
+	{
+		printf("%s\n", argv[num]);
+	}
+	return (0);
 }
