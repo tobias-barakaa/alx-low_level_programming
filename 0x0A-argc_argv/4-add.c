@@ -1,68 +1,56 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 
 /**
- * check_num - function
- * @str: argument*
- * Return; Always 0
+ * _isdigit - function check
+ *
+ * @c: argument
+ *
+ * Return: zero always
  */
 
-int check_num(char *str)
-
+int _isdigit(int c)
 {
-unsigned int count;
-
-count = 0;
-while (count < strlen(str)) 
-
-{
-if (!isdigit(str[count])) 
-{
-return (0);
-}
-
-count++;
-}
-return (1);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
 
 /**
- * main - Prints name
- * @argc: Count arguments
- * @argv: Arguments second
- * return: Always 0
+ * main - adds
+ *
+ * @argc: first argument
+ * @argv: second argument
+ *
+ * Return: 0 always
  */
-
 int main(int argc, char *argv[])
-
 {
+	int x, y, radd = 0;
+	char *a = NULL;
 
-int count;
-int str_to_int;
-int sum = 0;
+	if (argc <= 2)
+	{
+		printf("0\n");
+		return (0);
+	}
 
-count = 1;
-while (count < argc) 
-{
-if(check_num(argv[count]))
+	for (x = 1; x < argc; x++)
+	{
+		a = argv[x];
+		for (y = 0; a[y] != '\0'; y++)
+		{
+			if (_isdigit(a[y]) != 1)
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		radd += atoi(argv[x]);
+	}
 
-{
-str_to_int = atoi(argv[count]);
-sum += str_to_int;
-}
+	printf("%d\n", radd);
 
-else
-{
-printf("Error\n");
-return (1);
-}
-
-count++;
-}
-
-printf("%d\n", sum);
-
-return (0);
+	return (0);
 }
