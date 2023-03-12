@@ -10,7 +10,6 @@
 
 int main(int argc , char **argv)
 {
-
-	printf("\n Printing the arguments of a program:%d\n", argc);
+	printf("./progname%c\n", argc);
 	return (0);
 }
