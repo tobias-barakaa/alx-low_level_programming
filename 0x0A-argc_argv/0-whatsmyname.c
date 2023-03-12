@@ -3,8 +3,8 @@
 
 /**
  * main - function to print name
- * @argc: first parameter argc
- * @arfv: second parameter argv
+ * @argc: first pameteer
+ * @argv: second parameter
  * Return: return zero alwasys
  */
 int main(int argc, char **argv)
