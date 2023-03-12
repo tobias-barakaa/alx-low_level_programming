@@ -10,6 +10,7 @@
 
 int main(int argc , char **argv)
 {
-	printf("./progname%c\n", argc);
+	char name;
+	printf("%s\n", argv[0]);
 	return (0);
 }
