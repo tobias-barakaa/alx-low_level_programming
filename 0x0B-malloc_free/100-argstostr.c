@@ -11,7 +11,6 @@
 
 char *argstostr(int ac, char **av)
 {
-{
 	char *aout;
 	int c, i, j, ia;
 
