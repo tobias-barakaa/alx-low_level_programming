@@ -9,25 +9,46 @@
  * Return: return zero always
  */
 
-char *argstostr(int ac, char **av) {
-    if (ac == 0 || av == NULL) {
-        return NULL;
-    }
-    size_t total_length = 0;
-    for (int i = 0; i < ac; i++) {
-        total_length += strlen(av[i]) + 1;
-    }
-    char *str = (char *)malloc(total_length);
-    if (str == NULL) {
-        return NULL;
-    }
-    size_t pos = 0;
-    for (int i = 0; i < ac; i++) {
-        size_t len = strlen(av[i]);
-        memcpy(str + pos, av[i], len);
-        pos += len;
-        str[pos++] = '\n';
-    }
-    str[pos] = '\0';
-    return str;
+char *argstostr(int ac, char **av)
+{
+{
+	char *aout;
+	int c, i, j, ia;
+
+	if (ac == 0)
+		return (NULL);
+
+	for (c = i = 0; i < ac; i++)
+	{
+		if (av[i] == NULL)
+			return (NULL);
+
+		for (j = 0; av[i][j] != '\0'; j++)
+			c++;
+		c++;
+	}
+
+	aout = malloc((c + 1) * sizeof(char));
+
+	if (aout == NULL)
+	{
+		free(aout);
+		return (NULL);
+	}
+
+	for (i = j = ia = 0; ia < c; j++, ia++)
+	{
+		if (av[i][j] == '\0')
+		{
+			aout[ia] = '\n';
+			i++;
+			ia++;
+			j = 0;
+		}
+		if (ia < c - 1)
+			aout[ia] = av[i][j];
+	}
+	aout[ia] = '\0';
+
+	return (aout);
 }
