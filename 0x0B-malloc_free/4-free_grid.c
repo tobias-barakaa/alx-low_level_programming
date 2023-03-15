@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
  * free_grid - two dimensional function
