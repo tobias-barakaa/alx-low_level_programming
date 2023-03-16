@@ -11,30 +11,38 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	    // Handle null inputs
-    if (s1 == NULL) s1 = "";
-    if (s2 == NULL) s2 = "";
+char *sout;
+	unsigned int ls1, ls2, lsout, i;
 
-    // Determine lengths of s1 and s2
-    size_t len1 = strlen(s1);
-    size_t len2 = strlen(s2);
+	if (s1 == NULL)
+		s1 = "";
 
-    // Use entire s2 if n >= len2
-    if (n >= len2) n = len2;
+	if (s2 == NULL)
+		s2 = "";
 
-    // Allocate memory for concatenated string
-    char *result = (char*)malloc(len1 + n + 1);
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
+		;
 
-    if (result == NULL) {
-        return NULL;
-    }
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
+		;
 
-    // Copy s1 and first n bytes of s2 into result
-    memcpy(result, s1, len1);
-    memcpy(result+len1, s2, n);
+	if (n > ls2)
+		n = ls2;
 
-    // Add null terminator
-    result[len1+n] = '\0';
+	lsout = ls1 + n;
 
-    return result;
+	sout = malloc(lsout + 1);
+
+	if (sout == NULL)
+		return (NULL);
+
+	for (i = 0; i < lsout; i++)
+		if (i < ls1)
+			sout[i] = s1[i];
+		else
+			sout[i] = s2[i - ls1];
+
+	sout[i] = '\0';
+
+	return (sout);
 }
