@@ -1,9 +1,11 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * malloc_checked - function that allocates memory using malloc
  * @b: first argument
+ * @ptr: second argument
  * Return: return zero always
  */
 
