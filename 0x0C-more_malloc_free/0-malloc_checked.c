@@ -5,7 +5,7 @@
 /**
  * malloc_checked - function that allocates
  * @b: first argument
- * @ptr: second argument
+ *
  * Return: return zero always
  */
 
