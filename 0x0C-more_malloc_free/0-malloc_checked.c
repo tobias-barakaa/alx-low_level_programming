@@ -9,9 +9,9 @@
  * Return: return zero always
  */
 
-void *malloc_checked(unsigned int b)
+void malloc_checked(unsigned int b)
 {
-	unsigned int *ptr;
+	void *ptr;
 
 	ptr = malloc(b);
 	if (ptr == NULL)
