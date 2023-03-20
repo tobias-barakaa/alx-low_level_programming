@@ -1,6 +1,4 @@
 #include <stdio.h>
-#ifndef MYHEADER_H
-#define MYHEADER_H
 
 /**
  * main - main function
@@ -9,6 +7,6 @@
 
 int main()
 {
-	printf("%s\n", __FILE__);
-	return (0);
+printf("%s\n", __FILE__);
+return (0);
 }
