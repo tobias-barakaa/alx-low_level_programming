@@ -1,7 +1,6 @@
-#include <stdio.h>
+#ifndef MYHEADER_H
+#define MYHEADER_H
 
-int main()
-{
-	printf("%s\n", __FILE__);
-	return (0);
-}
+#define __FILE__ "2-main.c"
+
+#endif /* MYHEADER_H */
