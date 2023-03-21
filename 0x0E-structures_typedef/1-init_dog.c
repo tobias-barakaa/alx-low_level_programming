@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include "dog.h"
+
 /**
 * init_dog - function first
 * @d: first argument
@@ -17,4 +20,3 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	d->age = age;
 	}
 }
-#endif
