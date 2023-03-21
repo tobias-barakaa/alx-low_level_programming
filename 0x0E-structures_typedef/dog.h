@@ -1,6 +1,12 @@
 #ifndef _HEADER_
 #define _HEADER_
 
+/**
+ * main - main function
+ * @name: name of fun
+ * @age: age of fun
+ * @owner: owner
+ */
 
 struct dog {
   char *name;
