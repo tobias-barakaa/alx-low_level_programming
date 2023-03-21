@@ -20,23 +20,11 @@ struct dog
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	if (d != NULL)
+	{
 	d.name = name;
 	d.owner = owner;
 	d.age = age;
-}
-/**
- * main - main function
- * struct dog - function
- * @my_dog: argument
- * @return: zero
- */
-
-int main(void)
-{
-    struct dog my_dog;
-
-    init_dog(&d, "Poppy", "Bob", 3.5);
-    
-    return (0);
+	}
 }
 #endif
