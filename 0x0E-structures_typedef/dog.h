@@ -2,7 +2,7 @@
 #define _HEADER_
 
 /**
- * main - main function
+ * struct dog - main function
  * @name: name of fun
  * @age: age of fun
  * @owner: owner
