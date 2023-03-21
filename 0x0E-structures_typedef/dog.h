@@ -1,21 +1,20 @@
-#ifndef _HEADER_
-#define _HEADER_
+#ifndef DOG_H
+#define DOG_H
 
 /**
-* struct dog - main function
-* @name: name of fun
-* @age: age of fun
-* @owner: owner
-*/
-
-
+ * struct dog - function info
+ * @name: argument
+ * @age: param
+ * @owner: param
+ *
+ * Description: Longer description
+ */
 struct dog
 {
-char *name;
-float age;
-char *owner;
-}
-
+        char *name;
+        float age;
+        char *owner;
+};
 
 /**
  * dog_t - typedef for struct dog
