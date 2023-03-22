@@ -1,9 +1,9 @@
 #include <stdlib.h>
 
 /**
- *print_name - execute a function given as a parameter
- *@name: parameter that function ptr needs
- *@f:function to execute
+ *print_name - parameter function
+ *@name: first parameter
+ *@f:function f
  *
  */
 
