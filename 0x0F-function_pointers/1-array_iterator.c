@@ -2,10 +2,10 @@
 /* defines size_t */
 
 /**
- *array_iterator - execute function on an array via a function ptr
- *@array: array
- *@size: size of array
- *@action: pointer to function that we need to execute
+ *array_iterator - function to iterate
+ *@array: first arr
+ *@size: size 
+ *@action: pointer
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
