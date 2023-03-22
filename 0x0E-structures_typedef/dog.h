@@ -2,20 +2,17 @@
 #define DOG_H
 
 /**
-* struct dog - function info
-* @name: argument
-* @age: param
-* @owner: param
-*
-* Description: Longer description
-*/
-
+ * struct dog - function info
+ * @name: first argument
+ * @age: Second argument
+ * @owner: third argument
+ */
 struct dog
 {
-char *name;
-float age;
-char *owner;
-}
+        char *name;
+        float age;
+        char *owner;
+};
 
 /**
  * dog_t - typedef for struct dog
