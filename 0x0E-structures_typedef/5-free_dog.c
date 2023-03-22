@@ -3,8 +3,7 @@
 
 /**
  * free_dog - function to free dogs
- *
- * @d: pointer 
+ * @d: pointer
  */
 
 void free_dog(dog_t *d)
