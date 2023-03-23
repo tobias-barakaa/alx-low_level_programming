@@ -13,14 +13,14 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int sum = 0;
+	 int sum = 0;
 	va_list params;
 		va_start(params, n);
 		unsigned int i;
 		if (n == 0)
 			return (0);
 		for (i = 0; i < n; i++) {
-			unsigned int c = va_arg(params, int);
+			int c = va_arg(params, int);
 			sum += c;
 		}
 		va_end(params);
