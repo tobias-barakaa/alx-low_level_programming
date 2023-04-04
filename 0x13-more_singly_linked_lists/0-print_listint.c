@@ -10,7 +10,7 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t nod = 0;
-	
+	h = NULL;
 	while(h != NULL)
 	{
 		printf("%d/n", h->next->n);
