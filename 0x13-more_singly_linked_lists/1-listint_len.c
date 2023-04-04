@@ -1,14 +1,14 @@
 #include "lists.h"
 
 /**
- * listint_len - print elements
- * h:header
- * return: elements
+ *listint_len - print number of returned elements
+ *h:header
+ *return: return elem
  */
 
 size_t listint_len(const listint_t *h)
 {
-	int elem = 0;
+	size_t elem = 0;
 	
 	while (h != NULL)
 	{
