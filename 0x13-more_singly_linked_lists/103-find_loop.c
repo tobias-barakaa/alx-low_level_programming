@@ -3,7 +3,7 @@
 /**
  * find_listint_loop - link looped lists
  * @head: head pointer
- * Return: address 
+ * Return: address
  */
 
 listint_t *find_listint_loop(listint_t *head)
