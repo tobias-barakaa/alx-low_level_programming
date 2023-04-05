@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - free memory functions
- * @head: pointer 
+ * head: pointer 
  * Return: NULL
  */
 void free_listint2(listint_t **head)
