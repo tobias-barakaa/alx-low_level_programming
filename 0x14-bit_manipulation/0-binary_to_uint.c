@@ -12,6 +12,7 @@ unsigned int to_bi;
 
 for (to_bi = 0; *b; b++)
 {
+	while (*b != NULL)
 	if (*b == '1')
 	to_bi = (to_bi << 1) | 1;
 else if (*b == '0')
