@@ -19,6 +19,7 @@ else if (*b == '0')
 	else if (*b == NULL)
                 return (0);
 	else 
-		return (to_bi);
+		
 }
+	return (to_bi);
 }
