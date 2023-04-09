@@ -3,7 +3,6 @@
 /**
  * binary_to_uint - binary to interger change;
  * @b: first argument
- * @to_bit: second
  * Return: converted no. zero
  */
 
