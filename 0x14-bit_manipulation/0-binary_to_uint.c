@@ -10,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 {
 unsigned int to_bi;
 	if (!*b)
-		return (*b);
+		return (0);
 
 for (to_bi = 0; *b; b++)
 {
