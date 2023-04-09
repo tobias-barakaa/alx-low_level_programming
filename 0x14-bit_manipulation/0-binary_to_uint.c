@@ -15,7 +15,7 @@ for (to_bit = 0; *b; b++)
 	if (*b == '1')
 	to_bit = (to_bit << 1) | 1;
 else if (*b == '0')
-	result <<= 1;
+	to_bit <<= 1;
 	else
 		return (NULL);
 }
