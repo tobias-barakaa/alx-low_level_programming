@@ -8,16 +8,16 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int to_bit;
+unsigned int to_bi;
 
-for (to_bit = 0; *b; b++)
+for (to_bi = 0; *b; b++)
 {
 	if (*b == '1')
-	to_bit = (to_bit << 1) | 1;
+	to_bi = (to_bi << 1) | 1;
 else if (*b == '0')
-	to_bit = (to_bit << 1) | 1;
+	to_bi <<= 1;
 	else
-		return (NULL);
+		return (0);
 }
-return (to_bit);
+return (to_bi);
 }
