@@ -17,6 +17,7 @@ for (to_bi = 0; *b; b++)
 else if (*b == '0')
 	to_bi <<= 1;
 	else
-                return ((0) | (to_bi));
+                return (0);
 }
+	return (to_bi);
 }
