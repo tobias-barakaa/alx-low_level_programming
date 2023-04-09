@@ -15,7 +15,9 @@ for (to_bit = 0; *b; b++)
 	if (*b == '1')
 	to_bit = (to_bit << 1) | 1;
 else if (*b == '0')
-	return (NULL);
+	result <<= 1;
+	else
+		return (NULL);
 }
 return (to_bit);
 }
