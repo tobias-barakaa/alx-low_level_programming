@@ -1,6 +1,6 @@
 #include "main.h"
 
-/**
+/*
 *get_endianness - checks the end of the code
 *data: data argument first
 *ptr: point to char
