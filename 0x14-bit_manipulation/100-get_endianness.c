@@ -12,7 +12,7 @@ int get_endianness(void)
 {
 int data = 1;
   
-char *ptr = (char *) &num;
+char *ptr = (char *) &data;
 
 if (*ptr)
 return (1);
