@@ -1,20 +1,13 @@
-#include <stdio.h>
 #include "main.h"
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    int n;
 
-    n = get_bit(1024, 10);
-    printf("%d\n", n);
-    n = get_bit(98, 1);
-    printf("%d\n", n);
-    n = get_bit(1024, 0);
-    printf("%d\n", n);
-    return (0);
+
+
+
+int get_bit(unsigned long int n, unsigned int index) {
+    if (index >= sizeof(unsigned long int) * 8) { // Check if index is valid
+        return -1;
+    }
+    unsigned long int mask = 1UL << index; // Create a mask with a 1 at the given index
+    return (n & mask) != 0; // Use bitwise AND to check if the bit is 1 or 0 and return the value
 }
