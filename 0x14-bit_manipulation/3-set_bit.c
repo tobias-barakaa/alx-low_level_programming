@@ -9,10 +9,9 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int value_elem_data = (index >= sizeof(unsigned long int) * 8);
-	
-	if (value_elem_data)
-		return (-1);
-	*n |= (1 << index);
-	return (1);
+int value_elem_data = (index >= sizeof(unsigned long int) * 8);
+if (value_elem_data)
+return (-1);
+*n |= (1 << index);
+return (1);
 }
