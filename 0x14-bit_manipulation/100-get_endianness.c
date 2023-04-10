@@ -13,8 +13,8 @@ int get_endianness(void)
 int data = 1;
   
 char *ptr = (char *) &num;
-int numm_point = (*ptr == 1);
-if (numm_point)
+
+if (*ptr)
 return (1);
 return (0);
 }
