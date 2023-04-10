@@ -10,11 +10,13 @@
 
 int get_endianness(void)
 {
-int data = 1;
+unsigned int data = 1;
   
-char *ptr = (char *) &data;
-
-if (*ptr)
-return (1);
-return (0);
+  char *kimba = (char *)&data;
+  
+  if (*kimba)
+  {
+		return (1);
+  }
+  return (0);
 }
