@@ -6,6 +6,7 @@
 *ptr: point to char
 *char: pointer
 *Return: function for endiassness
+*/
 
 int get_endianness(void)
 {
