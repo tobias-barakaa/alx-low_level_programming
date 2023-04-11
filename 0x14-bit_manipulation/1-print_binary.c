@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_binary - binary representation
@@ -8,9 +9,21 @@
 
 void print_binary(unsigned long int n)
 {
-	int i;
-	
-	for (i = 31; i >= 0; i++)
-		printf ("%d", (n >> i) &i);
-      return (0);
-}      
+int new_elem_data;
+static int len;
+
+if (n == 0 && len > 0)
+ {
+return;
+ }
+else if (n == 0)
+{
+_putchar('0');
+return;
+}
+
+new_elem_data = (n & 1);
+len++;
+print_binary(n >>= 1);
+_putchar('0' + new_elem_data);
+}  
