@@ -2,7 +2,7 @@
 
 /**
 * append_text_to_file - append files
-* @ filename: first arg param
+* @filename: first arg param
 * @text_content: seond arg
 * Return: value
 */
