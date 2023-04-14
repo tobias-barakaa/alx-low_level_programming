@@ -10,15 +10,15 @@ int create_file(const char *filename, char *text_content)
 {
 	int file_data, string_length, data_write;
 
-	if (fistring_lengthame == NULL)
+	if (filename == NULL)
 		return (-1);
 
-	file_data = open(fistring_lengthame, O_CREAT | O_RDWR | O_TRUNC, 00600);
+	file_data = open(filename, O_CREAT | O_RDWR | O_TRUNC, 00600);
 	if (file_data == -1)
 		return (-1);
 	if (text_content != NULL)
 		for (string_length = 0; text_content[string_length] != '\0'; string_length++);
-		data_write = write(file_data, text_content, len);
+		data_write = write(file_data, text_content, string_length);
 	if (data_write == -1)
 		return (-1);
 	close(file_data);
