@@ -1,74 +1,60 @@
-
-#include "main.h"
-#include <stdio.h>
-
+include "main.h"
 /**
- * read_file_error_function - file open check
- * @to_get_from: from.
- * @to_get_to: to.
- * @argv: arguments 
- * Return: zero.
- */
-void read_file_error_function(int to_get_from, int to_get_to, char *argv[])
+  * error_echo - print errors
+  * @output_err: output_err to print
+  * @file: the file name
+  * @status_val_exit: exit status
+  * Return: void
+  */
+void error_echo(char *output_err, char *file, int status_val_exit)
 {
-	if (to_get_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	if (to_get_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+        dprintf(STDERR_FILENO, "%s%s\n", output_err, file);
+        exit(status_val_exit);
 }
-
 /**
- * main - check the code for ALX students.
- * @argc: number of arguments.
- * @argv: arguments vector.
- * Return: Always 0.
- */
-int main(int argc, char *argv[])
+  * main - copies data from one file to another
+  * @argc: # of args passed
+  * @argv: pointer to array containing args
+  *
+  * Return: 0 for win
+  */
+int main(int argc, char **argv)
 {
-	int to_get_from, to_get_to, err_close;
-	ssize_t nchars, nwr;
-	char buf[1024];
+        int fddest, fdsrc, readVal, writeVal;
+        char buffer[1024];
 
-	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp to_get_from to_get_to");
-		exit(97);
-	}
+        if (argc != 3)
+                error_echo("Usage: cp file_from file_to", "", 97);
 
-	to_get_from = open(argv[1], O_RDONLY);
-	to_get_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	read_file_error_function(to_get_from, to_get_to, argv);
+        fddest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+        if (fddest == -1)
+                error_echo("Error: Can't write to ", argv[2], 99);
 
-	nchars = 1024;
-	while (nchars == 1024)
-	{
-		nchars = read(to_get_from, buf, 1024);
-		if (nchars == -1)
-			read_file_error_function(-1, 0, argv);
-		nwr = write(to_get_to, buf, nchars);
-		if (nwr == -1)
-			read_file_error_function(0, -1, argv);
-	}
+        fdsrc = open(argv[1], O_RDONLY);
+        if (fdsrc == -1)
+                error_echo("Error: Can't read from file ", argv[1], 98);
 
-	err_close = close(to_get_from);
-	if (err_close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_get_from);
-		exit(100);
-	}
 
-	err_close = close(to_get_to);
-	if (err_close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_get_from);
-		exit(100);
-	}
-	return (0);
+        do {
+                readVal = read(fdsrc, buffer, 1024);
+                if (readVal == -1)
+                        error_echo("Error: Can't read from file ", argv[1], 98);
+
+                writeVal = write(fddest, buffer, readVal);
+                if (writeVal == -1 || writeVal != readVal)
+                        error_echo("Error: Can't write to ", argv[2], 99);
+
+                } while (writeVal == 1024);
+        if (close(fdsrc))
+        {
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdsrc);
+                exit(100);
+        }
+        if (close(fddest))
+        {
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fddest);
+                exit(100);
+        }
+        return (0);
 }
 
