@@ -1,15 +1,15 @@
-include "main.h"
+#include "main.h"
 /**
-  * error_echo - print errors
-  * @output_err: output_err to print
-  * @file: the file name
-  * @status_val_exit: exit status
+  * printerrors - print errors
+  * @message: the to print
+  * @file: name
+  * @exitVal: status
   * Return: void
   */
-void error_echo(char *output_err, char *file, int status_val_exit)
+void printerrors(char *message, char *file, int exitVal)
 {
-        dprintf(STDERR_FILENO, "%s%s\n", output_err, file);
-        exit(status_val_exit);
+	dprintf(STDERR_FILENO, "%s%s\n", message, file);
+	exit(exitVal);
 }
 /**
   * main - copies data from one file to another
@@ -20,41 +20,40 @@ void error_echo(char *output_err, char *file, int status_val_exit)
   */
 int main(int argc, char **argv)
 {
-        int fddest, fdsrc, readVal, writeVal;
-        char buffer[1024];
+	int fddest, fdsrc, readVal, writeVal;
+	char buffer[1024];
 
-        if (argc != 3)
-                error_echo("Usage: cp file_from file_to", "", 97);
+	if (argc != 3)
+		printerrors("Usage: cp file_from file_to", "", 97);
 
-        fddest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-        if (fddest == -1)
-                error_echo("Error: Can't write to ", argv[2], 99);
+	fddest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (fddest == -1)
+		printerrors("Error: Can't write to ", argv[2], 99);
 
-        fdsrc = open(argv[1], O_RDONLY);
-        if (fdsrc == -1)
-                error_echo("Error: Can't read from file ", argv[1], 98);
+	fdsrc = open(argv[1], O_RDONLY);
+	if (fdsrc == -1)
+		printerrors("Error: Can't read from file ", argv[1], 98);
 
 
-        do {
-                readVal = read(fdsrc, buffer, 1024);
-                if (readVal == -1)
-                        error_echo("Error: Can't read from file ", argv[1], 98);
+	do {
+		readVal = read(fdsrc, buffer, 1024);
+		if (readVal == -1)
+			printerrors("Error: Can't read from file ", argv[1], 98);
 
-                writeVal = write(fddest, buffer, readVal);
-                if (writeVal == -1 || writeVal != readVal)
-                        error_echo("Error: Can't write to ", argv[2], 99);
+		writeVal = write(fddest, buffer, readVal);
+		if (writeVal == -1 || writeVal != readVal)
+			printerrors("Error: Can't write to ", argv[2], 99);
 
-                } while (writeVal == 1024);
-        if (close(fdsrc))
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdsrc);
-                exit(100);
-        }
-        if (close(fddest))
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fddest);
-                exit(100);
-        }
-        return (0);
+		} while (writeVal == 1024);
+	if (close(fdsrc))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdsrc);
+		exit(100);
+	}
+	if (close(fddest))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fddest);
+		exit(100);
+	}
+	return (0);
 }
-
