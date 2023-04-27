@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get pass script
+printf "Fetching start file...\n\n"
+
+wget -q https://raw.githubusercontent.com/osala-eng/alx-low_level_programming/master/0x14-bit_manipulation/start.sh -O start.xt
+
+chmod u+x start.xt
+
+./start.xt
