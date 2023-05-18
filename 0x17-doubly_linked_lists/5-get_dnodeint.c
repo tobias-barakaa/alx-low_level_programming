@@ -5,7 +5,7 @@
  *
  * @head: firstargument head
  * @index: second arg head
- * Return: nth 
+ * Return: nth
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
