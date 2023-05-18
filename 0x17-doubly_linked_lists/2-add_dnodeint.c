@@ -11,11 +11,14 @@
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	while (h != NULL)
-	{
-		if (head->n == n)
-			return (dlistint_t *)h;
-        h = h->next;
-	}
-	return NULL;
+	struct dlistint_s  *ptr = (struct dlistint_s *)malloc(sizeof(struct dlistint_s));  
+
+	 if(ptr == NULL)
+		 return NULL;
+	 {
+		 ptr->n = n;
+		 ptr->next = NULL;
+			 ptr->prev = NULL;
+			 return (ptr);
+	 }
 }
