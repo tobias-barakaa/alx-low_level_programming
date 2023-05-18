@@ -10,10 +10,13 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
+	int num = 0;
+
 	struct dlistint_s *current = head;
 	while (head != NULL)
 	{
+		num++;
 		current = current->next;
-		return (current);
 	}
+	return (current);
 }
