@@ -14,18 +14,16 @@ if (pt == NULL)
 {
 	return (NULL);
 }
-pt->n = n;
-pt->prev = NULL;
-pt->next = *head;
-
-struct dlistint_s *temp = *head;
-
-  while (temp->next != NULL)
+listint_s *end, start = head;
+if(end)
 {
-    temp = temp->next;
-}
-  temp->next = newNode;
-  pt->prev = temp;
+	while (end->next)
+		end = end->next;
+	else
+	{
+		*head = start;
+		start->prev = NULL;
+	}
 
-  return (pt);
+	return (start);
 }
