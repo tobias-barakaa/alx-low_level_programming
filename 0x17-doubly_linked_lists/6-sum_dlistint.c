@@ -1,19 +1,21 @@
 #include "lists.h"
 /**
- *sum_dlistint - sums all values of each element of the doubly link list
- *@head: double liked list
- *Return: int value of the sum
+ *sum_dlistint - sums values of all lists
+ *@head: first argument of linked
+ *Return: total
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int sum = 0;
+	int total = 0;
 
 	if (head == NULL)
-		return (sum);
+	{
+		return (total);
+	}
 	while (head)
 	{
-		sum = sum + head->n;
+		total  += head->n;
 		head = head->next;
 	}
-	return (sum);
+	return (total);
 }
