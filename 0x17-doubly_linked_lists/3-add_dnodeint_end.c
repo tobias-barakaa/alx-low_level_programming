@@ -9,21 +9,30 @@
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-struct dlistint_s *pt = (struct dlistint_s *)malloc(sizeof(struct dlistint_s));
+	dlistint_t *pt, *end = *head;
+        *pt = malloc(sizeof(dlistint_t));
+
 if (pt == NULL)
 {
 	return (NULL);
 }
-listint_s *end, start = head;
-if(end)
-{
-	while (end->next)
-		end = end->next;
+pt->n = n;
+	pt->next = NULL;
+
+	if (end)
+	{
+		while (end->next)
+        {
+			end = end->next;
+        }
+		pt->prev = end;
+		end->next = pt;
+	}
 	else
 	{
-		*head = start;
-		start->prev = NULL;
+		*head = pt;
+		pt->prev = NULL;
 	}
 
-	return (start);
+	return (pt);
 }
