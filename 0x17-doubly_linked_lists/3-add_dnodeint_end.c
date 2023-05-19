@@ -1,38 +1,38 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - function to add at the end
- * @head: head pointer
- * @n: element
- * Return: value to 
+ * add_dnodeint_end - node add func
+ * @head: first argument head
+ * @n: elem val
+ * Return: add
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *pt, *end = *head;
-        *pt = malloc(sizeof(dlistint_t));
+	dlistint_t *curr = *head;
+	dlistint_t *next_curr;
 
-if (pt == NULL)
-{
-	return (NULL);
-}
-pt->n = n;
-	pt->next = NULL;
+	next_curr = malloc(sizeof(dlistint_t));
+	if (next_curr == NULL)
+		return (NULL);
 
-	if (end)
+	next_curr->n = n;
+	next_curr->next = NULL;
+
+	if (curr != NULL)
 	{
-		while (end->next)
+		while (curr->next != NULL)
         {
-			end = end->next;
+			curr = curr->next;
         }
-		pt->prev = end;
-		end->next = pt;
+		curr->next = next_curr;
 	}
 	else
 	{
-		*head = pt;
-		pt->prev = NULL;
+		*head = next_curr;
 	}
 
-	return (pt);
+	next_curr->prev = curr;
+
+	return (next_curr);
 }
