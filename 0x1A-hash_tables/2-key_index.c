@@ -1,9 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * key_index = function to find index
+ * key_index - function to find index
  * @size: size
- * Return: retur value
+ * @key:key
+ *
+ * Return: return value
  */
 
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
