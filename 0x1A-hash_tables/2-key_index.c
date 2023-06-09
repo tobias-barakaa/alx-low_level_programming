@@ -1,16 +1,14 @@
 #include "hash_tables.h"
 
 /**
- * key_index - Associate a index to a key.
- * @key: Key to be indexed.
- * @size: Size of the hash table.
- *
- * Return: Integer after the operations.
+ * key_index = function to find index
+ * @size: size
+ * Return: retur value
  */
+
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	unsigned long int result;
-
-	result = hash_djb2(key) % size;
-	return (result);
+unsigned long int hash_value = hash_djb2(key);
+unsigned long int index = hash_value % size;
+return (index);
 }
