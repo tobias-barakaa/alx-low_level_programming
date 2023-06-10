@@ -1,8 +1,5 @@
 #include "hash_tables.h"
 
-#include <stdlib.h>
-#include <string.h>
-
 /**
  * hash_table_get - Retrieves the value associated with a key
  * @ht: The hash table to look into
@@ -12,23 +9,28 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    unsigned long int index;
-    hash_node_t *node;
+	unsigned long int index;
+	hash_node_t *node;
 
-    if (ht == NULL || key == NULL || *key == '\0')
-        return NULL;
+	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
+		return (NULL);
 
-    index = key_index((const unsigned char *)key, ht->size);
-    node = ht->array[index];
-
-    /* Traverse the linked list at the index */
-    while (node != NULL)
+	index = key_index((const unsigned char *)key, ht->size);
+	node = ht->array[index];
+	if (node == NULL)
     {
-        if (strcmp(node->key, key) == 0)
-            return node->value;
-
-        node = node->next;
+		return (NULL);
     }
-
-    return NULL;
+	while (strcmp(node->key, key) && node != NULL)
+	{
+		node = node->next;
+	}
+	if (node == NULL)
+    {
+		return (NULL);
+    }
+	else
+    {
+		return (node->value);
+    }
 }
