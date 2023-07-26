@@ -1,0 +1,5 @@
+# Makefile for school executable
+
+# Rule to build the executable
+all:
+	gcc main.c school.c -o school
