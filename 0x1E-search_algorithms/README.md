@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <head>
     <title>Search Algorithms</title>
 </head>
@@ -94,5 +92,3 @@
         <strong>Time Complexity:</strong> O(√n), making it more efficient than linear search.
     </p>
 </body>
-</html>
-
