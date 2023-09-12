@@ -6,7 +6,7 @@
 *@value: data to check
 *@size: length of the arr
 *
-*Return: value otherwise
+*Return: EXIT STATUS
 */
 
 int linear_search(int *array, size_t size, int value)
