@@ -10,12 +10,12 @@
       Time Complexity: O(log n) in the worst case, where 'n' is the number of elements.
     </p>
         
-     <h2>Hashing</h2>
-    <p>
+    Hashing
+    
         Description: Hashing is a technique that uses a hash function to map keys or values to an index in an array, allowing for efficient retrieval and storage of data.
-    <p>
+   
         Time Complexity: O(1) on average, but it can degrade to O(n) in the worst case if there are many collisions.
-    </p>
+   
 
     <h2>Depth-First Search (DFS)</h2>
     <p>
