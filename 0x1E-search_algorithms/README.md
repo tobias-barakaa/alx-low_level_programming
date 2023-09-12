@@ -5,20 +5,14 @@
     </p>
     <p>
        Time Complexity:O(n) in the worst case, where 'n' is the number of elements.
-    </p>
-
-    Binary Search
-    <p>
-        Description: Binary search is a more efficient search algorithm that works on sorted data. It repeatedly divides the search space in half and compares the middle element with the target value.
-    </p>
-    <p>
+      Binary Search
+         Description: Binary search is a more efficient search algorithm that works on sorted data. It repeatedly divides the search space in half and compares the middle element with the target value.
       Time Complexity: O(log n) in the worst case, where 'n' is the number of elements.
     </p>
-
-    <h2>Hashing</h2>
+        
+     <h2>Hashing</h2>
     <p>
         Description: Hashing is a technique that uses a hash function to map keys or values to an index in an array, allowing for efficient retrieval and storage of data.
-    </p>
     <p>
         Time Complexity: O(1) on average, but it can degrade to O(n) in the worst case if there are many collisions.
     </p>
