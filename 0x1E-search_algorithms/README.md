@@ -1,10 +1,5 @@
-<head>
-    <title>Search Algorithms</title>
-</head>
-<body>
-    <h1>Search Algorithms</h1>
-
-    <h2>Linear Search</h2>
+<h1>Search Algorithms</h1>
+<h2>Linear Search</h2>
     <p>
         <strong>Description:</strong> Linear search, also known as sequential search, involves scanning through each element in a data structure (usually an array or list) one by one until the target element is found or the entire data structure is exhausted.
     </p>
@@ -91,4 +86,3 @@
     <p>
         <strong>Time Complexity:</strong> O(√n), making it more efficient than linear search.
     </p>
-</body>
