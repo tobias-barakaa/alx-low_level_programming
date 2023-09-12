@@ -6,17 +6,23 @@
  *@size: size of array
  *@value: element of array
  *Return: Always EXIT_SUCCESS
- *@
-*/
+ **/
 
 int binary_search(int *array, size_t size, int value)
 {
-    size_t left = 0, right = size - 1, mid;
+    size_t i, left = 0, right = size - 1, mid;
 
     while (left <= right)
     {
+      printf("Searching in array: ");
+        for (i = left; i <= right; i++)
+        {
+            printf("%d", array[i]);
+            if (i < right)
+                printf(", ");
+        }
+        printf("\n");
         mid = (right + left) / 2;
-       printf("Searching in array: %lu\n", mid);
         if (array[mid] == value)
             return (mid);
         else if (array[mid] < value)
