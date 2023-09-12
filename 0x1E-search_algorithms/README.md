@@ -7,7 +7,7 @@
        Time Complexity:O(n) in the worst case, where 'n' is the number of elements.
     </p>
 
-    <h2>Binary Search</h2>
+    <h3>Binary Search</h3>
     <p>
         Description: Binary search is a more efficient search algorithm that works on sorted data. It repeatedly divides the search space in half and compares the middle element with the target value.
     </p>
