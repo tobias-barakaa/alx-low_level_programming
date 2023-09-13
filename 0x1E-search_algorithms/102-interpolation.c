@@ -20,6 +20,11 @@ while (low <= high && value >= array[low] && value <= array[high])
 pos = low + (((double)(high - low) /
 (array[high] - array[low])) * (value - array[low]));
 printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
+if (pos >= size)
+{
+printf(" is out of range\n");
+break;
+}
 if (array[pos] == value)
 {
 return (pos);
